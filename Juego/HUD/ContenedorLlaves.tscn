@@ -1,0 +1,47 @@
+[gd_scene load_steps=6 format=2]
+
+[ext_resource path="res://Juego/HUD/ContenedorInfo.tscn" type="PackedScene" id=1]
+[ext_resource path="res://Recursos/HUD/carrots.png" type="Texture" id=2]
+[ext_resource path="res://Recursos/Fonts/Kenney Future.ttf" type="DynamicFontData" id=3]
+
+[sub_resource type="DynamicFont" id=2]
+size = 70
+font_data = ExtResource( 3 )
+
+[sub_resource type="Animation" id=1]
+resource_name = "animacion_llaves"
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath("TextureRect:rect_position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.2, 0.4, 0.6, 0.8, 1 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( 189.612, -8.1732 ), Vector2( 185.122, -48.5818 ), Vector2( 187.367, -8.1732 ), Vector2( 188.49, -62.0513 ), Vector2( 192.979, 32.2354 ), Vector2( 196.347, -49.7042 ) ]
+}
+
+[node name="ContenedorLlaves" instance=ExtResource( 1 )]
+margin_right = 344.0
+margin_bottom = 127.0
+
+[node name="TextureRect" parent="." index="0"]
+margin_left = -154.388
+margin_top = -71.6732
+margin_right = 124.612
+margin_bottom = 275.327
+texture = ExtResource( 2 )
+
+[node name="Cantidad" parent="." index="1"]
+margin_left = 34.6326
+margin_top = -46.9181
+margin_right = 182.633
+margin_bottom = 199.082
+custom_fonts/font = SubResource( 2 )
+
+[node name="AnimationPlayer" parent="." index="2"]
+autoplay = "animacion_llaves"
+anims/animacion_llaves = SubResource( 1 )

@@ -1,0 +1,93 @@
+[gd_scene load_steps=9 format=2]
+
+[ext_resource path="res://Juego/Niveles/Nivel.gd" type="Script" id=1]
+[ext_resource path="res://Recursos/Background/bg_layer3.png" type="Texture" id=9]
+[ext_resource path="res://Recursos/Background/bg_layer4.png" type="Texture" id=10]
+[ext_resource path="res://Recursos/Background/bg_layer2.png" type="Texture" id=11]
+[ext_resource path="res://Recursos/Background/bg_layer1.png" type="Texture" id=12]
+[ext_resource path="res://Juego/HUD/HUD.tscn" type="PackedScene" id=13]
+[ext_resource path="res://Juego/Menus/MenuPausa.tscn" type="PackedScene" id=18]
+[ext_resource path="res://Juego/Personaje/Wendy.tscn" type="PackedScene" id=19]
+
+[node name="NivelBase" type="Node"]
+script = ExtResource( 1 )
+nivel_actual = "res://Juego/Niveles/NivelBase.tscn"
+
+[node name="ParallaxFondo" type="ParallaxBackground" parent="."]
+scroll_base_offset = Vector2( 0, -350 )
+
+[node name="ParallaxFondo" type="ParallaxLayer" parent="ParallaxFondo"]
+motion_scale = Vector2( 0, 1 )
+motion_mirroring = Vector2( 2048, 2048 )
+
+[node name="TextureRect" type="TextureRect" parent="ParallaxFondo/ParallaxFondo"]
+margin_right = 40.0
+margin_bottom = 40.0
+texture = ExtResource( 12 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ParallaxNubesLejanas" type="ParallaxLayer" parent="ParallaxFondo"]
+motion_scale = Vector2( 0.3, 1 )
+motion_offset = Vector2( 0, -300 )
+motion_mirroring = Vector2( 2048, 0 )
+
+[node name="TextureRect" type="TextureRect" parent="ParallaxFondo/ParallaxNubesLejanas"]
+margin_right = 40.0
+margin_bottom = 40.0
+texture = ExtResource( 11 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ParallaxNubesMedias" type="ParallaxLayer" parent="ParallaxFondo"]
+motion_scale = Vector2( 0.6, 1 )
+motion_offset = Vector2( 0, -300 )
+motion_mirroring = Vector2( 2048, 0 )
+
+[node name="TextureRect" type="TextureRect" parent="ParallaxFondo/ParallaxNubesMedias"]
+margin_right = 40.0
+margin_bottom = 40.0
+texture = ExtResource( 9 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ParallaxNubesCercanas" type="ParallaxLayer" parent="ParallaxFondo"]
+motion_offset = Vector2( 0, -300 )
+motion_mirroring = Vector2( 2048, 0 )
+
+[node name="TextureRect" type="TextureRect" parent="ParallaxFondo/ParallaxNubesCercanas"]
+margin_right = 40.0
+margin_bottom = 40.0
+texture = ExtResource( 10 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="CapaFrente" type="CanvasLayer" parent="."]
+
+[node name="HUD" parent="CapaFrente" instance=ExtResource( 13 )]
+margin_left = 4.26062
+margin_top = 0.608274
+margin_right = 4.26062
+margin_bottom = 0.608276
+
+[node name="MenuPausa" parent="CapaFrente" instance=ExtResource( 18 )]
+visible = false
+
+[node name="PlataformasNormales" type="Node" parent="."]
+
+[node name="PlataformasCortas" type="Node" parent="."]
+
+[node name="PlataformasLargas" type="Node" parent="."]
+
+[node name="Enemigos" type="Node" parent="."]
+
+[node name="Monedas" type="Node" parent="."]
+
+[node name="Zanahorias" type="Node" parent="."]
+
+[node name="Wendy" parent="." instance=ExtResource( 19 )]
+position = Vector2( 141.529, 482.966 )

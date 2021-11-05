@@ -1,0 +1,38 @@
+[gd_scene load_steps=9 format=2]
+
+[ext_resource path="res://Juego/Niveles/NivelBase.tscn" type="PackedScene" id=1]
+[ext_resource path="res://Juego/Plataformas/Plataformalargapiedra.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Juego/Objetos/ZanahoriaLlave.tscn" type="PackedScene" id=3]
+[ext_resource path="res://Juego/Objetos/Portal.tscn" type="PackedScene" id=4]
+[ext_resource path="res://Juego/Objetos/MonedaOro.tscn" type="PackedScene" id=5]
+[ext_resource path="res://Juego/Objetos/MonedaPlata.tscn" type="PackedScene" id=6]
+[ext_resource path="res://Juego/Objetos/MonedaBronce.tscn" type="PackedScene" id=7]
+[ext_resource path="res://Juego/Plataformas/Plataformacorta.tscn" type="PackedScene" id=8]
+
+[node name="Nivel2" instance=ExtResource( 1 )]
+nivel_actual = "res://Juego/Niveles/Nivel2.tscn"
+
+[node name="Plataformacorta" parent="PlataformasCortas" index="0" instance=ExtResource( 8 )]
+position = Vector2( 690.915, 521.018 )
+
+[node name="Plataformalargapiedra" parent="PlataformasLargas" index="0" instance=ExtResource( 2 )]
+position = Vector2( 363.486, 609.374 )
+
+[node name="MonedaBronce" parent="Monedas" index="0" instance=ExtResource( 7 )]
+position = Vector2( 256.194, 540.126 )
+
+[node name="MonedaOro" parent="Monedas" index="1" instance=ExtResource( 5 )]
+position = Vector2( 348.173, 545.519 )
+
+[node name="MonedaPlata" parent="Monedas" index="2" instance=ExtResource( 6 )]
+position = Vector2( 440.104, 545.808 )
+
+[node name="ZanahoriaLlave" parent="Zanahorias" index="0" instance=ExtResource( 3 )]
+position = Vector2( 536.12, 528.569 )
+
+[node name="Wendy" parent="." index="8"]
+position = Vector2( 141.529, 539.598 )
+
+[node name="Portal" parent="." index="9" instance=ExtResource( 4 )]
+position = Vector2( 684.424, 438.883 )
+proximo_nivel = "res://Juego/Niveles/Nivel3.tscn"

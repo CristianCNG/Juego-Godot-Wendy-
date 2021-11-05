@@ -1,0 +1,18 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://Juego/Objetos/power_up/PowerUpBase.tscn" type="PackedScene" id=1]
+[ext_resource path="res://Recursos/Items/powerup_bunny.png" type="Texture" id=2]
+
+[sub_resource type="GDScript" id=1]
+script/source = "extends \"res://Juego/Objetos/power_up/PowerUpBase.gd\"
+
+func aplicar_power_up(body):
+	body.cambiar_fuerza_salto()
+"
+
+[node name="PowerUpSalto" instance=ExtResource( 1 )]
+script = SubResource( 1 )
+
+[node name="Sprite" parent="." index="0"]
+scale = Vector2( 0.558771, 0.558771 )
+texture = ExtResource( 2 )

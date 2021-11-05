@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/21 Days.mp3-5ab63d28993ab8b7fb29d11c31ecd8cb.mp3str"
+
+[deps]
+
+source_file="res://Recursos/sonido/21 Days.mp3"
+dest_files=[ "res://.import/21 Days.mp3-5ab63d28993ab8b7fb29d11c31ecd8cb.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0

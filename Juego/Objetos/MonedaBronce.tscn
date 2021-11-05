@@ -1,0 +1,9 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://Juego/Objetos/MonedaBase.tscn" type="PackedScene" id=1]
+
+[node name="MonedaBronce" instance=ExtResource( 1 )]
+tipo_moneda = "bronce"
+
+[node name="AnimatedSprite" parent="." index="0"]
+animation = "girar_bronce"

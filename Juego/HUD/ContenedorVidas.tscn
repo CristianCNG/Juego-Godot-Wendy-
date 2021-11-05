@@ -1,0 +1,47 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://Juego/HUD/ContenedorInfo.tscn" type="PackedScene" id=1]
+[ext_resource path="res://Recursos/Fonts/Kenney Future.ttf" type="DynamicFontData" id=2]
+
+[sub_resource type="DynamicFont" id=2]
+size = 70
+font_data = ExtResource( 2 )
+
+[sub_resource type="Animation" id=1]
+resource_name = "animacion_vidas"
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath("TextureRect:rect_position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.2, 0.4, 0.6, 0.8, 1 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( 168.703, -21.1756 ), Vector2( 185.19, -61.6087 ), Vector2( 186.676, -8.98621 ), Vector2( 192.127, -63.3925 ), Vector2( 185.685, -6.01318 ), Vector2( 185.19, -42.5814 ) ]
+}
+
+[node name="ContenedorVidas" instance=ExtResource( 1 )]
+margin_left = 1.0
+margin_top = -1.0
+margin_right = 345.0
+margin_bottom = 126.0
+
+[node name="TextureRect" parent="." index="0"]
+margin_left = -149.297
+margin_top = -84.6756
+margin_right = 129.703
+margin_bottom = 262.324
+
+[node name="Cantidad" parent="." index="1"]
+margin_left = 11.9727
+margin_top = -37.8784
+margin_right = 159.973
+margin_bottom = 208.122
+custom_fonts/font = SubResource( 2 )
+
+[node name="AnimationPlayer" parent="." index="2"]
+autoplay = "animacion_vidas"
+anims/animacion_vidas = SubResource( 1 )

@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/muerte_nubon.wav-2c91f3e5ec24e163b6214f77e3c200ee.sample"
+
+[deps]
+
+source_file="res://Recursos/sonido/muerte_nubon.wav"
+dest_files=[ "res://.import/muerte_nubon.wav-2c91f3e5ec24e163b6214f77e3c200ee.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop=false
+compress/mode=0
